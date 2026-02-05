@@ -67,7 +67,7 @@ export default function Home() {
   } | null>(null);
 
   const yesScale = 1 + noCount * 0.2;
-  const noText = NO_TEXTS[Math.min(noCount, NO_TEXTS.length - 1)];
+  const noText = NO_TEXTS[(noCount % (NO_TEXTS.length - 1)) + 1];
 
   const moveNoButton = useCallback(() => {
     const padding = 24;

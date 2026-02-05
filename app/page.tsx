@@ -67,10 +67,7 @@ export default function Home() {
   } | null>(null);
 
   const yesScale = 1 + noCount * 0.2;
-  const noText =
-    noCount === 0
-      ? NO_TEXTS[0]
-      : NO_TEXTS[((noCount - 1) % (NO_TEXTS.length - 1)) + 1];
+  const noText = NO_TEXTS[(noCount % (NO_TEXTS.length - 1)) + 1];
 
   const moveNoButton = useCallback(() => {
     const padding = 24;
@@ -147,7 +144,7 @@ export default function Home() {
             </div>
 
             {/* Heading */}
-            <h1 className="heading-romantic">Will you be my Valentine?</h1>
+            <h1 className="heading-romantic">Will you be my Valentine Dee?</h1>
 
             {/* Sweet handwritten message */}
             <p className="handwritten mt-1">
